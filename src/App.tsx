@@ -73,7 +73,7 @@ function App() {
             circleFontSize: '18px',
             labelFontSize: '0px',
             borderRadius: '50%',
-            fontWeight: `${typography.fontWeights.bold}`
+            fontWeight: `${typography.fontWeights.bold}`,
           }}
           connectorStyleConfig={{
             activeColor: `${colors.purple}`,
@@ -94,18 +94,10 @@ function App() {
           }}
           className="div-with-width"
         >
-          {activeStep === 0 && (
-            <Welcome />
-          )}
-          {activeStep === 1 && (
-            <Setup />
-          )}
-          {activeStep === 2 && (
-            <Usage />
-          )}
-          {activeStep === 3 && (
-            <Final />
-          )}
+          {activeStep === 0 && <Welcome setActiveStep={setActiveStep} />}
+          {activeStep === 1 && <Setup />}
+          {activeStep === 2 && <Usage />}
+          {activeStep === 3 && <Final />}
         </StyledDiv>
       </Grid>
     </MainContainer>
