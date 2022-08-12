@@ -50,17 +50,17 @@ function Setup({ setActiveStep }: SetupProps): JSX.Element {
 
   const { wname, wurl } = formData;
 
-  const onChange = (event) => {
-    setFormData((prev) => ({
+  const onChange = event => {
+    setFormData(prev => ({
       ...prev,
       [event.target.name]: event.target.value,
     }));
   };
 
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     event.preventDefault();
-
-    setActiveStep(1);
+    
+    setActiveStep(2);
   };
   return (
     <Grid
@@ -96,7 +96,9 @@ function Setup({ setActiveStep }: SetupProps): JSX.Element {
           value={wurl}
           onChange={onChange}
         />
-        <Button type="submit">Create Workspace</Button>
+        <Button marginTop="2%" type="submit">
+          Create Workspace
+        </Button>
       </Form>
     </Grid>
   );
