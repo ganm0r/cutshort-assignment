@@ -51,7 +51,7 @@ function App() {
             gap: '16px',
           }}
         >
-          <img src="/eden-logo.png" alt="eden-logo" height={36} style={{ marginTop: '4px' }} />
+          <img src={require("./images/eden-logo.png")} alt="eden-logo" height={36} style={{ marginTop: '4px' }} />
           <Heading
             style={{
               fontSize: '36px',

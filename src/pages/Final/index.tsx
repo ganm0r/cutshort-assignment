@@ -43,7 +43,7 @@ function Final({ displayName }: FinalProps): JSX.Element {
       }}
     >
       <Flex>
-        <img src="/eden-check.png" alt="eden-png" height={96} />
+        <img src={require("../../images/eden-check.png")} alt="eden-png" height={96} />
       </Flex>
       <Flex>
         <Heading>Congratulations, {displayName}</Heading>
