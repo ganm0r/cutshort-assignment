@@ -30,7 +30,8 @@ const StyledDiv = styled.div`
 `;
 
 function App() {
-  const [activeStep, setActiveStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(0);
+  const [displayName, setDisplayName] = useState('');
 
   return (
     <MainContainer>
@@ -93,12 +94,13 @@ function App() {
             width: '676px',
             height: '500px',
           }}
-          className="div-with-width"
         >
-          {activeStep === 0 && <Welcome setActiveStep={setActiveStep} />}
+          {activeStep === 0 && (
+            <Welcome setActiveStep={setActiveStep} setDisplayName={setDisplayName} />
+          )}
           {activeStep === 1 && <Setup setActiveStep={setActiveStep} />}
-          {activeStep === 2 && <Usage />}
-          {activeStep === 3 && <Final />}
+          {activeStep === 2 && <Usage setActiveStep={setActiveStep} />}
+          {activeStep === 3 && <Final displayName={displayName} />}
         </StyledDiv>
       </Grid>
     </MainContainer>
