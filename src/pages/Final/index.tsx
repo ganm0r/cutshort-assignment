@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import typography from 'theme/constants/typography';
 import colors from 'theme/constants/colors';
 
+import Button from 'components/Button';
+
 const Heading = styled.h1`
   margin: 12px;
   font-size: 38px;
@@ -28,24 +30,28 @@ const Flex = styled.div`
   gap: 8px;
 `;
 
-function Final() {
+interface FinalProps {
+  displayName: string;
+}
+
+function Final({ displayName }: FinalProps): JSX.Element {
   return (
     <Grid
       style={{
-        gridTemplateRows: '2fr repeat(1fr, 3)',
-        alignContent: 'center',
-        justifyItems: 'center',
+        gridTemplateRows: '1fr 2fr',
+        paddingTop: '101px',
       }}
     >
-      <img src="/eden-check.png" alt="eden-png" height={96} />
       <Flex>
-        <Heading>
-          Congratulations, Walt!
-        </Heading>
-        <SubHeading>
-          You have completed onboarding, you can start using the Eden!
-        </SubHeading>
+        <img src="/eden-check.png" alt="eden-png" height={96} />
       </Flex>
+      <Flex>
+        <Heading>Congratulations, {displayName}</Heading>
+        <SubHeading>You have completed onboarding, you can start using the Eden!</SubHeading>
+      </Flex>
+      <Button marginTop="1.35%" type="submit">
+        Launch Eden
+      </Button>
     </Grid>
   );
 }
