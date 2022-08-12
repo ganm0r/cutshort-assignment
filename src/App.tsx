@@ -91,6 +91,7 @@ function App() {
         <StyledDiv
           style={{
             width: '676px',
+            height: '500px',
           }}
           className="div-with-width"
         >
