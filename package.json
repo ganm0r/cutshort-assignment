@@ -10,9 +10,6 @@
     "@types/node": "^16.11.47",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "5.32.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-typescript": "17.0.0",
     "eslint-config-prettier": "8.5.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
@@ -34,19 +31,14 @@
     "extends": [
       "react-app",
       "react-app/jest",
-      "prettier",
-      "airbnb",
-      "airbnb-typescript"
+      "prettier"
     ],
-    "parser": "@typescript-eslint/parser",
+    "parser": "",
     "parserOptions": {
       "project": "./tsconfig.json"
     },
     "rules": {
-      "import/extensions": "off",
-      "@typescript-eslint/comma-dangle": [
-        "off"
-      ]
+      "import/extensions": "off"
     }
   },
   "lint-staged": {
@@ -68,7 +60,6 @@
   },
   "devDependencies": {
     "@types/styled-components": "5.1.25",
-    "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1"
   }
