@@ -39,9 +39,10 @@ const Form = styled.form`
 
 interface WelcomeProps {
   setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+  setDisplayName: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function Welcome({ setActiveStep }: WelcomeProps): JSX.Element {
+function Welcome({ setActiveStep, setDisplayName }: WelcomeProps): JSX.Element {
   const [formData, setFormData] = useState({
     fname: '',
     dname: '',
@@ -49,16 +50,17 @@ function Welcome({ setActiveStep }: WelcomeProps): JSX.Element {
 
   const { fname, dname } = formData;
 
-  const onChange = (event) => {
-    setFormData((prev) => ({
+  const onChange = event => {
+    setFormData(prev => ({
       ...prev,
       [event.target.name]: event.target.value,
     }));
   };
 
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     event.preventDefault();
 
+    setDisplayName(dname);
     setActiveStep(1);
   };
 
@@ -95,7 +97,9 @@ function Welcome({ setActiveStep }: WelcomeProps): JSX.Element {
           value={dname}
           onChange={onChange}
         />
-        <Button type="submit">Create Workspace</Button>
+        <Button marginTop="1.35%" type="submit">
+          Create Workspace
+        </Button>
       </Form>
     </Grid>
   );
