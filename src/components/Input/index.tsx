@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from 'theme/constants/colors';
-// import typography from 'theme/constants/typography';
 
 const Grid = styled.div`
   display: grid;
@@ -62,7 +61,7 @@ function Input({
   onChange,
   id,
   name,
-  value
+  value,
 }: InputProps): JSX.Element {
   return (
     <Grid

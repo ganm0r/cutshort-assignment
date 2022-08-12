@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from 'theme/constants/colors';
-// import typography from 'theme/constants/typography';
 
 const Grid = styled.div`
   display: grid;
@@ -82,7 +81,7 @@ function CustomInput({
   onChange,
   id,
   name,
-  value
+  value,
 }: CustomInputProps): JSX.Element {
   return (
     <Grid
@@ -102,9 +101,7 @@ function CustomInput({
           padding: '0',
         }}
       >
-        <StyledCustomInputField
-          placeholder={url}
-        />
+        <StyledCustomInputField placeholder={url} />
         <StyledInputField
           type={type}
           placeholder={placeholder}
