@@ -35,8 +35,15 @@ const StyledInputField = styled.input`
   }
 `;
 
+const StyledSpan = styled.span`
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: ${colors.darkGray};
+`;
+
 interface InputProps {
   title: string;
+  optional: boolean;
   type: React.HTMLInputTypeAttribute;
   placeholder: string;
   required: boolean;
@@ -48,6 +55,7 @@ interface InputProps {
 
 function Input({
   title,
+  optional,
   type,
   placeholder,
   required,
@@ -63,7 +71,10 @@ function Input({
         alignItems: 'flex-start',
       }}
     >
-      <StyledInputTitle>{title}</StyledInputTitle>
+      <StyledInputTitle>
+        {title}
+        {optional && <StyledSpan> (optional)</StyledSpan>}
+      </StyledInputTitle>
       <StyledInputField
         type={type}
         placeholder={placeholder}
