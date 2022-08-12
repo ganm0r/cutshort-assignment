@@ -96,7 +96,7 @@ function App() {
           className="div-with-width"
         >
           {activeStep === 0 && <Welcome setActiveStep={setActiveStep} />}
-          {activeStep === 1 && <Setup />}
+          {activeStep === 1 && <Setup setActiveStep={setActiveStep} />}
           {activeStep === 2 && <Usage />}
           {activeStep === 3 && <Final />}
         </StyledDiv>
