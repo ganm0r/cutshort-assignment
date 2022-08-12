@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from 'theme/constants/colors';
-// import typography from 'theme/constants/typography';
 
 const StyledButton = styled.button`
   background-color: ${colors.purple};
@@ -12,7 +11,6 @@ const StyledButton = styled.button`
   outline: none;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 2%;
   border: none;
 
   &:hover {
@@ -27,11 +25,12 @@ const StyledButton = styled.button`
 interface ButtonProps {
   children: React.ReactNode;
   type: 'button' | 'submit' | 'reset' | undefined;
+  marginTop: string;
 }
 
-function Button({ children, type }: ButtonProps): JSX.Element {
+function Button({ children, type, marginTop }: ButtonProps): JSX.Element {
   return (
-    <StyledButton type={type}>
+    <StyledButton style={{ marginTop: `${marginTop}` }} type={type}>
       {children}
     </StyledButton>
   );
