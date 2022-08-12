@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/cutshort-assignment/static/js/main.82fc2188.js",
+    "main.js": "/cutshort-assignment/static/js/main.0754e260.js",
+    "static/media/eden-check.png": "/cutshort-assignment/static/media/eden-check.1a1a3ddc74064323457b.png",
     "index.html": "/cutshort-assignment/index.html",
-    "main.82fc2188.js.map": "/cutshort-assignment/static/js/main.82fc2188.js.map"
+    "main.0754e260.js.map": "/cutshort-assignment/static/js/main.0754e260.js.map"
   },
   "entrypoints": [
-    "static/js/main.82fc2188.js"
+    "static/js/main.0754e260.js"
   ]
 }
